@@ -17,7 +17,7 @@ app.get('/hello', (req, res) => {
 
 app.get('/tarefas', async (req, res) => {
     const tarefas = await Tarefa.find()
-    res.json(tarefa)
+    res.json(tarefas)
 })
 
 //Att
@@ -29,7 +29,7 @@ app.put('/tarefas/:id', async (req, res) => {
 
 app.get('/tarefas/:id', async (req, res) => {
     const tarefas = await Tarefa.findById(req.params.id)
-    res.json(tarefa)
+    res.json(tarefas)
 })
 
 app.post('/tarefas', async (req, res) => {
@@ -43,7 +43,7 @@ app.post('/tarefas', async (req, res) => {
 
 app.delete('/tarefas/:id', async (req, res) => {
     await Tarefa.findByIdAndDelete(req.params.id)
-    req.jason()
+    res.json()
 })
 
 const DB_USERNAME = process.env.DB_USERNAME;

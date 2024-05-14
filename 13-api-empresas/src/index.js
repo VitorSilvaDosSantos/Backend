@@ -12,4 +12,4 @@ app.use(routes)
 
 app.listen(PORT, () => {
     console.log(`Aplicação rodando na porta ${PORT}`)
-})
+}) 

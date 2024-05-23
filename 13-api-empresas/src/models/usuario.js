@@ -6,9 +6,13 @@ const schema = new mongoose.Schema(
             type: String,
             required: true
         },
-        descricao: {
+        email: {
             type: String,
-            required: false
+            required: true
+        },
+        senha: {
+            type: String,
+            required: true
         }
     },
     {
@@ -16,6 +20,6 @@ const schema = new mongoose.Schema(
     }
 )
 
-const Departamento = mongoose.model('departamento', schema)
+const Usuario = mongoose.model('usuario', schema)
 
-module.exports = Departamento
+module.exports = Usuario

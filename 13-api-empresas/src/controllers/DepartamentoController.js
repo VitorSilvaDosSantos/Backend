@@ -2,7 +2,7 @@ const Departamento = require('../models/Departamento')
 
 async function create(req, res) {
     const departamento = new Departamento(req.body)
-    const departamentoCriado = await cargo.save()
+    const departamentoCriado = await departamento.save()
     res.status(201).json(departamentoCriado)
 }
 
@@ -20,9 +20,9 @@ async function getById(req, res) {
 }
 
 async function update(req, res) {
-    const departamentoAtulizado = await Departamento.findByIdAndUpdate(req.params.id, req.body, { new: true })
-    if (departamentoAtulizado) {
-        res.json(departamentoAtulizado)
+    const departamentoAtualizado = await Departamento.findByIdAndUpdate(req.params.id, req.body, { new: true })
+    if (departamentoAtualizado) {
+        res.json(departamentoAtualizado)
     } else {
         res.status(404).json({ mensagem: "Departamento não encontrato!" })
     }

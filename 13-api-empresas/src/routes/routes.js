@@ -12,9 +12,9 @@ const TarefaController = require('../controllers/TarefaController')
 const { validarId } = require('../validators/IdValidator')
 const { cargoValidador } = require('../validators/CargoValidator')
 const { departamentoValidador } = require('../validators/DepartamentoValidator')
-const { funcionarioValidador } = require('../validators/FuncionarioValidator')
-const { projetoValidador } = require('../validators/ProjetoValidator')
-const { tarefaValidador } = require('../validators/TarefaValidator')
+const { funcionarioValidador } = require('../validators/FuncionarioValidador')
+const { projetoValidador } = require('../validators/ProjetoValidador')
+const { tarefaValidador } = require('../validators/TarefaValidador')
 
 // Cargos
 router.post('/cargos', cargoValidador, CargoController.create)
